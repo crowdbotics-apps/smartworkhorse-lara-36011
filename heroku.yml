@@ -4,7 +4,3 @@ build:
   config:
     DEBUG_COLLECTSTATIC: 1
     SECRET_KEY: build
-release:
-  image: web
-  command:
-    - python3 manage.py migrate
