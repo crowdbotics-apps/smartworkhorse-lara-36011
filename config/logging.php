@@ -95,6 +95,13 @@ return [
             ],
         ],
 
+        'stdout' => [ 
+             'driver' => 'monolog',
+             'level' => env('LOG_LEVEL', 'debug'),
+             'handler' => StreamHandler::class,
+             'with' => [ 'stream' => 'php://stdout', ], 
+        ],
+
         'syslog' => [
             'driver' => 'syslog',
             'level' => env('LOG_LEVEL', 'debug'),
